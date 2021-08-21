@@ -1,0 +1,355 @@
+\documentclass{article}
+\usepackage[landscape]{geometry}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{esint}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing}
+\usepackage{amsmath,amssymb}
+\usepackage{pgfplots}
+
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\makeatletter
+
+\newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
+\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+
+\title{STAT 251 Formula Sheet}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{afterpage}
+
+\advance\topmargin-.8in
+\advance\textheight3in
+\advance\textwidth3in
+\advance\oddsidemargin-1.45in
+\advance\evensidemargin-1.45in
+\parindent0pt
+\parskip2pt
+\newcommand{\hr}{\centerline{\rule{3.5in}{1pt}}}
+
+\begin{document}
+
+\definecolor{background}{rgb}{1, 0.9, 0.8}
+\pagecolor{background}\afterpage{\nopagecolor}
+
+
+\begin{center}{}\huge\textbf{IB HL Math: Analysis and Approaches Formula Sheet}\\\LARGE{\textbf{Koral Kulacoglu}}\\
+
+\end{center}
+\begin{multicols*}{2}
+
+\tikzstyle{mybox} = [draw=black, fill=white, very thick,
+    rectangle, rounded corners, inner sep=10pt, inner ysep=10pt]
+\tikzstyle{fancytitle} =[fill=black, text=white, font=\bfseries]
+
+
+%------------ START ---------------
+
+
+%------------ Common Difference ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+    
+    The \textbf{common difference (d)} is the difference between two consecutive terms. \\
+    
+	\begin{tabular}{lp{8cm} l}
+    	$ d = u_{n+1} - u_n $
+    	& $ d $: common difference \\
+    	& $ u $: sequence \\
+    	& $ n $: term \\\\
+	\end{tabular}
+    
+    Given $ \textbf{2},4,6,8... $ and $ n = 1 $ \\\\
+	\begin{tabular}{lp{8cm} l}
+    	$ d = u_{n+1} - u_n $ \\
+    	$ d = 4 - 2 $ \\
+    	$ d = \textbf{2} $
+	\end{tabular}
+
+    \end{minipage}
+};
+
+%------------ Common Difference Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Common Difference - Arithmetic Sequences};
+\end{tikzpicture}
+
+%------------ N'th Term ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+    
+    The n'th term can be found with the following formula: \\
+    
+	\begin{tabular}{lp{8cm} l}
+    	$ u_n = u_1 + d(n-1) $
+    	& $ d $: common difference \\
+    	& $ u $: sequence \\
+    	& $ n $: term \\\\
+	\end{tabular}
+    
+    Given $ 2,4,\textbf{6},8... $ and $ n = 3 $ \\\\
+	\begin{tabular}{lp{8cm} l}
+    	$ u_n = u_1 + d(n-1) $ \\
+    	$ u_3 = 2 + 2(2) $ \\
+    	$ u_3 = \textbf{6} $
+	\end{tabular}
+
+    \end{minipage}
+};
+
+%------------ N'th Term Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {N'th Term - Arithmetic Sequences};
+\end{tikzpicture}
+
+%------------ Sum of N Terms ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+    
+    The sum of n terms can be found with the following formula: \\
+    
+	\begin{tabular}{lp{8cm} l}
+    	$ S_n = \frac{n}{2}(2u_1 + d(n-1)) $
+    	& $ S $: sum of size n \\
+    	& $ d $: common difference \\
+    	& $ u $: sequence \\
+    	& $ n $: term \\\\
+	\end{tabular}
+    
+    Given $ \textbf{2,4,6,8}... $ and $ n = 4 $ \\\\
+	\begin{tabular}{lp{8cm} l}
+    	$ S_n = \frac{n}{2}(2u_1 + d(n-1)) $ \\
+    	$ S_4 = \frac{4}{2}(2(2) + 2(4-1)) $ \\
+    	$ S_4 = \textbf{20} $
+	\end{tabular}
+
+    \end{minipage}
+};
+
+%------------ Sum of N Terms Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Sum of N Terms - Arithmetic Sequences};
+\end{tikzpicture}
+
+%------------ Finding the First Term & Common Difference ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+    
+    $ u_{10} = 37 $ \\
+    $ u_{22} = 1 $ \\
+    Find the first term ($ u_1 $) and the common difference ($ d $).
+    
+    \begin{enumerate}
+    \setlength\itemsep{0em}
+        \item Place both numbers in the \textbf{n'th term formula}:\\
+        $ u_n = u_1 + d(n-1) $ \\\\
+        $ 37 = u_1 + 9d $ \\
+        $ 1 = u_1 + 21d $ \\
+        
+        \item Equate them to find the \textbf{common difference}:\\
+        $ 9d - 37 = 21d - 1 $ \\
+        $ d = -3 $ \\
+
+        \item Plug \textbf{d} into the n'th term formula to find the \textbf{first term}:\\
+        $ 37 = u_1 + 9(-3) $
+        $ u_1 = 64 $
+    \end{enumerate}
+
+    \end{minipage}
+};
+
+%------------ Finding the First Term & Common Difference term Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Finding the First Term \& Common Difference - Arithmetic Sequences};
+\end{tikzpicture}
+
+%------------ N'th Term ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+    
+    The n'th term can be found with the following formula: \\
+    
+	\begin{tabular}{lp{8cm} l}
+    	$ u_n = u_1 \cdot r^{n-1} $
+    	& $ r $: common ratio \\
+    	& $ u $: sequence \\
+    	& $ n $: term \\\\
+	\end{tabular}
+	
+    \end{minipage}
+};
+
+%------------ N'th Term Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {N'th Term - Geometric Sequences};
+\end{tikzpicture}
+
+%------------ Sum of N Terms ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+    
+    The sum of n terms can be found with the following formula: \\
+
+	\begin{tabular}{lp{8cm} l}
+    	$ S_n = \frac{u_1(1-r^n)}{1-r} $
+    	& $ S $: sum of size n \\
+    	& $ r $: common ratio \\
+    	& $ u $: sequence \\
+    	& $ n $: term \\\\
+	\end{tabular}
+	
+	If it goes onto the final term (infinity): \\
+	
+	\begin{tabular}{lp{8cm} l}
+    	$ S_n = \frac{u_1}{1-r} $
+	\end{tabular}
+    
+    \end{minipage}
+};
+
+%------------ Sum of N Terms Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Sum of N Terms - Geometric Sequences};
+\end{tikzpicture}
+
+%------------ Finding the First Term & Common Ratio - Geometric Sequences ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+    
+    The sum of the first 5 terms is 3798. \\
+    The sum to the end is 4374. \\
+    Find the sum of the first 7 terms.
+    
+    \begin{enumerate}
+    \setlength\itemsep{0em}
+        \item Place the values into the \textbf{sum of n terms} \textbf{sum of all terms} formula:\\
+        $ S_n = \frac{u_1(1-r^n)}{1-r} $ \\
+        $ 3798 = \frac{u_1(1-r^5)}{1-r} $ \\
+        
+        $ S_n = \frac{u_1}{1-r} $ \\
+        $ 4374 = \frac{u_1}{1-r} $ \\
+        
+        \item Rearrange and substitute $ u_1 $, then solve for the \textbf{common ratio} (r):\\
+        $ u_1 = 4374(1-r) $ \\
+        
+        $ 3798 = \frac{4374(1-r)(1-r^5)}{1-r} $ \\
+        $ r = \frac{2}{3} $ \\
+
+        \item Plug the common ratio into the \textbf{sum of all terms} formula to find the \textbf{first term}:\\
+        $ 4374 = \frac{u_1}{1-\frac{2}{3}} $ \\
+        $ u_1 = 1458 $ \\
+        
+        \item Use the \textbf{sum of n terms} formula to find the sum of the first 7 terms:\\
+        $ S_n = \frac{u_1(1-r^n)}{1-r} $ \\
+        $ S_n = \frac{1458(1-(\frac{2}{3})^7)}{1-\frac{2}{3}} $ \\
+        $ S_n = 4370 $
+
+    \end{enumerate}
+
+    \end{minipage}
+};
+
+%------------ Finding the First Term & Common Ratio - Geometric Sequences Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Finding the First Term \& Common Ratio - Geometric Sequences};
+\end{tikzpicture}
+
+%------------ Sigma ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+    
+    Sum the range:\\
+	\LARGE{$ \sum_{n=start}^{end} formula $}\\\\
+	\small{$ \sum_{n=1}^{3} 2n = 2(1) + 2(2) + 2(3) = 12$}
+    	
+    \end{minipage}
+};
+
+%------------ Sigma Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Sigma};
+\end{tikzpicture}
+
+%------------ Exponent Laws ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+    
+    \begin{itemize}
+    \setlength\itemsep{0em}
+        \item $ x^1 = x $
+        \item $ x^0 = 1 $
+        \item $ x^m \cdot x^n = x^{m+n} $
+        \item $ \frac{x^m}{x^n} = x^{m-n} $
+        \item $ (x^m)^n = m^{m \cdot n} $
+        \item $ (x \cdot y)^n = x^n \cdot y^n $
+        \item $ x^{-1} = \frac{1}{x} $
+
+    \end{itemize}
+    	
+    \end{minipage}
+};
+
+%------------ Exponent Laws Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Exponent Laws};
+\end{tikzpicture}
+
+%------------ Fractional Exponents ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+    
+    \begin{itemize}
+    \setlength\itemsep{0em}
+        \item $ x^{\frac{1}{2}} = \sqrt{x} $
+        \item $ \sqrt{x} \cdot \sqrt{x} = x $
+        \item $ \sqrt{xy} = \sqrt{x} \cdot \sqrt{y} $
+        \item $ x^{m/n} = \sqrt[n]{x^m} $
+
+    \end{itemize}
+    	
+    \end{minipage}
+};
+
+%------------ Fractional Exponents Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Fractional Exponents};
+\end{tikzpicture}
+
+%------------ Logarithmic Laws ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+    
+    \begin{itemize}
+    \setlength\itemsep{0em}
+        \item $ \log_c{a} + \log_c{b} = log_c{(a \cdot b)}$
+        \item $ \log_c{a} - \log_c{b} = log_c{(\frac{a}{b})}$
+        \item $ n\log_c{a} = log_c{(a^n)}$
+        \item $ \log_b{a} = \frac{log{a}}{log{b}}$
+
+    \end{itemize}
+    
+    \quad\quad\quad\quad\quad $ \log_a{0} = x $ is undefined because $ a^x \neq 0 $
+    
+    \begin{tikzpicture}
+    \begin{axis}[restrict y to domain=-10:10]
+    \addplot [blue,domain=-10:10, samples=200]{log10(x)};
+    \end{axis}
+    \end{tikzpicture}
+    \end{minipage}
+};
+
+%------------ Logarithmic Laws Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Logarithmic Laws};
+\end{tikzpicture}
+
+\end{multicols*}
+\end{document}
