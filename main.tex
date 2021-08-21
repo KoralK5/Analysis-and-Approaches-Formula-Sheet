@@ -9,6 +9,7 @@
 \usetikzlibrary{decorations.pathmorphing}
 \usepackage{amsmath,amssymb}
 \usepackage{pgfplots}
+\usepackage{array}
 
 \usepackage{colortbl}
 \usepackage{xcolor}
@@ -21,7 +22,7 @@
 \newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
 \makeatother
 
-\title{STAT 251 Formula Sheet}
+\title{IB HL Math: Analysis and Approaches Formula Sheet}
 \usepackage[brazilian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{afterpage}
@@ -349,6 +350,119 @@
 
 %------------ Logarithmic Laws Header ---------------------
 \node[fancytitle, right=10pt] at (box.north west) {Logarithmic Laws};
+\end{tikzpicture}
+
+%------------ Natural Logarithm ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+    
+    The \textbf{natural logarithm} (ln) is log base e ($ log_e $). \\
+    e is irrational: 2.71828...
+    \begin{itemize}
+    \setlength\itemsep{0em}
+        \item $ \ln{a} + \ln{b} = \ln{(a \cdot b)} $
+        \item $ \ln{a} - \ln{b} = \ln{(\frac{a}{b})} $
+        \item $ n\ln{a} = \ln{(a^n)}$
+        \item $ \ln{e} = 1 $
+        \item $ e^{ln{(a)}} = a $
+
+    \end{itemize}
+    \end{minipage}
+};
+
+%------------ Natural Logarithm Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Natural Logarithm};
+\end{tikzpicture}
+
+%------------ Combinations Formula ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+
+	\begin{tabular}{lp{8cm} l}
+    	\LARGE{$ C_k^n = {n \choose k} = \frac{n!}{k!(n-k)!} $} \\
+    	& $ C_r^n $: number of combinations \\
+    	& $ n $: total number of objects in the set \\
+    	& $ k $: number of choosing objects from the set \\\\
+	\end{tabular}
+	
+	How many ways can you arrange 'k' from a set of 'n' if the order does not matter?\\
+
+    \end{minipage}
+};
+
+%------------ Combinations Formula Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Combinations Formula};
+\end{tikzpicture}
+
+%------------ Permutations Formula ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+
+	\begin{tabular}{lp{8cm} l}
+    	\LARGE{$ P_k^n = \frac{n!}{(n-k)!} $} \\
+    	& $ P_n^k $: number of permutations \\
+    	& $ n $: total number of objects in the set \\
+    	& $ k $: number of choosing objects from the set \\\\
+	\end{tabular}
+	
+	How many ways can you arrange 'k' from a set of 'n' if the order matters?
+
+    \end{minipage}
+};
+
+%------------ Permutations Formula Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Permutations Formula};
+\end{tikzpicture}
+
+%------------ Pascal's Triangle ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+    
+    \begin{tabular}{>{$n=}l<{$\hspace{12pt}}*{13}{c}}
+    0 &&&&&&&1&&&&&&\\
+    1 &&&&&&1&&1&&&&&\\
+    2 &&&&&1&&2&&1&&&&\\
+    3 &&&&1&&3&&3&&1&&&\\
+    4 &&&1&&4&&6&&4&&1&&\\
+    5 &&1&&5&&10&&10&&5&&1&\\
+    6 &1&&6&&15&&20&&15&&6&&1
+    \end{tabular}
+
+    \end{minipage}
+};
+
+%------------ Pascal's Triangle Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Pascal's Triangle};
+\end{tikzpicture}
+
+%------------ Binomial Expansion ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+
+    General formula: \\
+	\LARGE{$ (a+b)^n = \sum_{k=0}^{n} {n \choose k} a^{n-k} b^k $} \\
+
+    \large
+	\textbf{a}'s exponent \textbf{decreases}. \\
+	\textbf{b}'s exponent \textbf{increases}.
+
+    \begin{itemize}
+    \setlength\itemsep{0em}
+        \item $ (a+b)^2 = a^2 + 2ab + b^2 $
+        \item $ (a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3 $
+        \item $ (a+b)^n = {n \choose 0}a^{n-0}b^0 + {n \choose 1}a^{n-1}b^1 + {n \choose 2}a^{n-2}b^2... $ \\
+    \end{itemize}
+
+    \end{minipage}
+};
+
+%------------ Binomial Expansion Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Binomial Expansion};
 \end{tikzpicture}
 
 \end{multicols*}
