@@ -490,5 +490,25 @@
 \node[fancytitle, right=10pt] at (box.north west) {Binomial Expansion};
 \end{tikzpicture}
 
+%------------ Induction ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+
+    Steps :
+    \begin{enumerate}
+        \setlength\itemsep{0em}
+        \item Showing the statement holds for the first case, $ n = 1 $.
+        \item Assuming the statement holds true for some value, $ n = k $.
+        \item Proving, using the assumption in 2, that the statement holds for $ n = k + 1 $.
+    \end{enumerate}
+
+    \end{minipage}
+};
+
+%------------ Induction Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Induction};
+\end{tikzpicture}
+
 \end{multicols*}
 \end{document}
