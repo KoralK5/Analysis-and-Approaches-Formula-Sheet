@@ -54,6 +54,103 @@
 
 %------------ START ---------------
 
+%------------ Exponent Laws ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+    
+    \begin{itemize}
+    \setlength\itemsep{0em}
+        \item $ x^1 = x $
+        \item $ x^0 = 1 $
+        \item $ x^m \cdot x^n = x^{m+n} $
+        \item $ \frac{x^m}{x^n} = x^{m-n} $
+        \item $ (x^m)^n = m^{m \cdot n} $
+        \item $ (x \cdot y)^n = x^n \cdot y^n $
+        \item $ x^{-1} = \frac{1}{x} $
+
+    \end{itemize}
+    	
+    \end{minipage}
+};
+
+%------------ Exponent Laws Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Exponent Laws};
+\end{tikzpicture}
+
+%------------ Fractional Exponents ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+    
+    \begin{itemize}
+    \setlength\itemsep{0em}
+        \item $ x^{\frac{1}{2}} = \sqrt{x} $
+        \item $ \sqrt{x} \cdot \sqrt{x} = x $
+        \item $ \sqrt{xy} = \sqrt{x} \cdot \sqrt{y} $
+        \item $ x^{m/n} = \sqrt[n]{x^m} $
+
+    \end{itemize}
+    	
+    \end{minipage}
+};
+
+%------------ Fractional Exponents Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Fractional Exponents};
+\end{tikzpicture}
+
+%------------ Logarithmic Laws ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+    
+    \begin{itemize}
+    \setlength\itemsep{0em}
+        \item $ \log_c{a} + \log_c{b} = log_c{(a \cdot b)}$
+        \item $ \log_c{a} - \log_c{b} = log_c{(\frac{a}{b})}$
+        \item $ n\log_c{a} = log_c{(a^n)}$
+        \item $ \log_b{a} = \frac{log{a}}{log{b}}$
+
+    \end{itemize}
+    
+    \quad\quad\quad\quad\quad $ \log_a{0} = x $ is undefined because $ a^x \neq 0 $
+    
+    \begin{tikzpicture}
+    \begin{axis}[restrict y to domain=-10:10]
+    \addplot [blue,domain=-10:10, samples=200]{log10(x)};
+    \end{axis}
+    \end{tikzpicture}
+    \end{minipage}
+};
+
+%------------ Logarithmic Laws Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Logarithmic Laws};
+\end{tikzpicture}
+
+%------------ Natural Logarithm ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+    
+    The \textbf{natural logarithm} (ln) is log base e ($ log_e $). \\
+    e is irrational: 2.71828...
+    \begin{itemize}
+    \setlength\itemsep{0em}
+        \item $ \ln{a} + \ln{b} = \ln{(a \cdot b)} $
+        \item $ \ln{a} - \ln{b} = \ln{(\frac{a}{b})} $
+        \item $ n\ln{a} = \ln{(a^n)}$
+        \item $ \ln{e} = 1 $
+        \item $ e^{ln{(a)}} = a $
+
+    \end{itemize}
+    \end{minipage}
+};
+
+%------------ Natural Logarithm Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Natural Logarithm};
+\end{tikzpicture}
+
+
 
 %------------ Common Difference ---------------
 \begin{tikzpicture}
@@ -183,7 +280,7 @@
     	$ u_n = u_1 \cdot r^{n-1} $
     	& $ r $: common ratio \\
     	& $ u $: sequence \\
-    	& $ n $: term \\\\
+    	& $ n $: term \\
 	\end{tabular}
 	
     \end{minipage}
@@ -205,15 +302,9 @@
     	& $ S $: sum of size n \\
     	& $ r $: common ratio \\
     	& $ u $: sequence \\
-    	& $ n $: term \\\\
+    	& $ n $: term \\
 	\end{tabular}
 	
-	If it goes onto the final term (infinity): \\
-	
-	\begin{tabular}{lp{8cm} l}
-    	$ S_n = \frac{u_1}{1-r} $
-	\end{tabular}
-    
     \end{minipage}
 };
 
@@ -279,102 +370,6 @@
 \node[fancytitle, right=10pt] at (box.north west) {Sigma};
 \end{tikzpicture}
 
-%------------ Exponent Laws ---------------
-\begin{tikzpicture}
-\node [mybox] (box){%
-    \begin{minipage}{0.46\textwidth}
-    
-    \begin{itemize}
-    \setlength\itemsep{0em}
-        \item $ x^1 = x $
-        \item $ x^0 = 1 $
-        \item $ x^m \cdot x^n = x^{m+n} $
-        \item $ \frac{x^m}{x^n} = x^{m-n} $
-        \item $ (x^m)^n = m^{m \cdot n} $
-        \item $ (x \cdot y)^n = x^n \cdot y^n $
-        \item $ x^{-1} = \frac{1}{x} $
-
-    \end{itemize}
-    	
-    \end{minipage}
-};
-
-%------------ Exponent Laws Header ---------------------
-\node[fancytitle, right=10pt] at (box.north west) {Exponent Laws};
-\end{tikzpicture}
-
-%------------ Fractional Exponents ---------------
-\begin{tikzpicture}
-\node [mybox] (box){%
-    \begin{minipage}{0.46\textwidth}
-    
-    \begin{itemize}
-    \setlength\itemsep{0em}
-        \item $ x^{\frac{1}{2}} = \sqrt{x} $
-        \item $ \sqrt{x} \cdot \sqrt{x} = x $
-        \item $ \sqrt{xy} = \sqrt{x} \cdot \sqrt{y} $
-        \item $ x^{m/n} = \sqrt[n]{x^m} $
-
-    \end{itemize}
-    	
-    \end{minipage}
-};
-
-%------------ Fractional Exponents Header ---------------------
-\node[fancytitle, right=10pt] at (box.north west) {Fractional Exponents};
-\end{tikzpicture}
-
-%------------ Logarithmic Laws ---------------
-\begin{tikzpicture}
-\node [mybox] (box){%
-    \begin{minipage}{0.46\textwidth}
-    
-    \begin{itemize}
-    \setlength\itemsep{0em}
-        \item $ \log_c{a} + \log_c{b} = log_c{(a \cdot b)}$
-        \item $ \log_c{a} - \log_c{b} = log_c{(\frac{a}{b})}$
-        \item $ n\log_c{a} = log_c{(a^n)}$
-        \item $ \log_b{a} = \frac{log{a}}{log{b}}$
-
-    \end{itemize}
-    
-    \quad\quad\quad\quad\quad $ \log_a{0} = x $ is undefined because $ a^x \neq 0 $
-    
-    \begin{tikzpicture}
-    \begin{axis}[restrict y to domain=-10:10]
-    \addplot [blue,domain=-10:10, samples=200]{log10(x)};
-    \end{axis}
-    \end{tikzpicture}
-    \end{minipage}
-};
-
-%------------ Logarithmic Laws Header ---------------------
-\node[fancytitle, right=10pt] at (box.north west) {Logarithmic Laws};
-\end{tikzpicture}
-
-%------------ Natural Logarithm ---------------
-\begin{tikzpicture}
-\node [mybox] (box){%
-    \begin{minipage}{0.46\textwidth}
-    
-    The \textbf{natural logarithm} (ln) is log base e ($ log_e $). \\
-    e is irrational: 2.71828...
-    \begin{itemize}
-    \setlength\itemsep{0em}
-        \item $ \ln{a} + \ln{b} = \ln{(a \cdot b)} $
-        \item $ \ln{a} - \ln{b} = \ln{(\frac{a}{b})} $
-        \item $ n\ln{a} = \ln{(a^n)}$
-        \item $ \ln{e} = 1 $
-        \item $ e^{ln{(a)}} = a $
-
-    \end{itemize}
-    \end{minipage}
-};
-
-%------------ Natural Logarithm Header ---------------------
-\node[fancytitle, right=10pt] at (box.north west) {Natural Logarithm};
-\end{tikzpicture}
-
 %------------ Combinations Formula ---------------
 \begin{tikzpicture}
 \node [mybox] (box){%
@@ -415,28 +410,6 @@
 
 %------------ Permutations Formula Header ---------------------
 \node[fancytitle, right=10pt] at (box.north west) {Permutations Formula};
-\end{tikzpicture}
-
-%------------ Pascal's Triangle ---------------
-\begin{tikzpicture}
-\node [mybox] (box){%
-    \begin{minipage}{0.46\textwidth}
-    
-    \begin{tabular}{>{$n=}l<{$\hspace{12pt}}*{13}{c}}
-    0 &&&&&&&1&&&&&&\\
-    1 &&&&&&1&&1&&&&&\\
-    2 &&&&&1&&2&&1&&&&\\
-    3 &&&&1&&3&&3&&1&&&\\
-    4 &&&1&&4&&6&&4&&1&&\\
-    5 &&1&&5&&10&&10&&5&&1&\\
-    6 &1&&6&&15&&20&&15&&6&&1
-    \end{tabular}
-
-    \end{minipage}
-};
-
-%------------ Pascal's Triangle Header ---------------------
-\node[fancytitle, right=10pt] at (box.north west) {Pascal's Triangle};
 \end{tikzpicture}
 
 %------------ Binomial Expansion ---------------
@@ -490,6 +463,28 @@
 \node[fancytitle, right=10pt] at (box.north west) {Binomial Expansion};
 \end{tikzpicture}
 
+%------------ Pascal's Triangle ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+    
+    \begin{tabular}{>{n=}l<{\hspace{12pt}}*{13}{c}}
+    0 &&&&&&&1&&&&&&\\
+    1 &&&&&&1&&1&&&&&\\
+    2 &&&&&1&&2&&1&&&&\\
+    3 &&&&1&&3&&3&&1&&&\\
+    4 &&&1&&4&&6&&4&&1&&\\
+    5 &&1&&5&&10&&10&&5&&1&\\
+    6 &1&&6&&15&&20&&15&&6&&1
+    \end{tabular}
+
+    \end{minipage}
+};
+
+%------------ Pascal's Triangle Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Pascal's Triangle};
+\end{tikzpicture}
+
 %------------ Induction ---------------
 \begin{tikzpicture}
 \node [mybox] (box){%
@@ -509,6 +504,24 @@
 %------------ Induction Header ---------------------
 \node[fancytitle, right=10pt] at (box.north west) {Induction};
 \end{tikzpicture}
+
+%------------ Complex Numbers ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+
+    A complex number is $ a + bi $ \\
+    $ a \in \mathbb{R} $ \\
+    $ b \in \mathbb{C} $ \\
+    $ i = \sqrt{-1} $ \\
+
+    \end{minipage}
+};
+
+%------------ Complex Numbers Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Complex Numbers};
+\end{tikzpicture}
+
 
 \end{multicols*}
 \end{document}
