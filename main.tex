@@ -505,23 +505,85 @@
 \node[fancytitle, right=10pt] at (box.north west) {Induction};
 \end{tikzpicture}
 
-%------------ Complex Numbers ---------------
+%------------ Complex Number Forms ---------------
 \begin{tikzpicture}
 \node [mybox] (box){%
     \begin{minipage}{0.46\textwidth}
 
-    A complex number is $ a + bi $ \\
-    $ a \in \mathbb{R} $ \\
-    $ b \in \mathbb{C} $ \\
-    $ i = \sqrt{-1} $ \\
+    Forms of complex numbers (z)... \\
+    
+    Cartesian: \\
+	\begin{tabular}{lp{8cm} l}
+        $ z = a + bi $
+        & $ i = \sqrt{-1} $ \\
+        & $ a \in \mathbb{R} $ \\
+        & $ b \in \mathbb{C} $ \\
+	\end{tabular}
+
+    Polar: \\
+	\begin{tabular}{lp{8cm} l}
+        $ z = r(\cos{\theta} + i\sin{\theta}) $
+        & r: modulus (distance from origin) \\
+        & $ \theta $: argument (angle from x-axis to point) \\\\
+	\end{tabular}
+	
+	Polar coordinates use the distance and angle. \\
+	
+        \begin{tikzpicture}
+            \draw (0,0) grid (3,3);
+            \fill[blue] (1,2) circle (2pt);
+            \draw[blue] (0:0) -- +(1,2);
+        \end{tikzpicture}
+    
+    $ \theta = \arctan({2/1}) = 63^{\circ} $ (adj/opp) \\
+    $ r = \sqrt{1^2+2^2} = \sqrt{5} $ (Pythagorean Theorem) \\
 
     \end{minipage}
 };
 
-%------------ Complex Numbers Header ---------------------
-\node[fancytitle, right=10pt] at (box.north west) {Complex Numbers};
+%------------ Complex Number Forms Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Complex Number Forms};
 \end{tikzpicture}
 
+%------------ Complex Number Conjugate ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+
+    The \textbf{conjugate} of a complex number: \\
+    $ \bar{z} = a - bi $
+    
+    \end{minipage}
+};
+
+%------------ Complex Number Conjugate Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Complex Number Conjugate};
+\end{tikzpicture}
+
+%------------ Complex Number Division ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+
+    When dividing, since a \textbf{complex number multiplied by its conjugate} is a \textbf{real number} they can be rationalized. \\
+    
+    For example: Rewrite $ \frac{2+6i}{1-2i} $ in the form: $ a + b1 $. \\
+    
+    $ = \frac{(2+6i)(1+2i)}{(1-2i)(1+2i)} $ \\
+    
+    \LARGE
+    Remember \textbf{$ i^2 = -1 $} \\\\
+    
+    \normalsize
+    $ = \frac{-10+10i}{5} = -2+2i $ \\
+
+    \end{minipage}
+};
+
+%------------ Complex Number Division Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Complex Number Division};
+\end{tikzpicture}
 
 \end{multicols*}
 \end{document}
+
