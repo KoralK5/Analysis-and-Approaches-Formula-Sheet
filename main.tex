@@ -68,7 +68,6 @@
         \item $ (x^m)^n = m^{m \cdot n} $
         \item $ (x \cdot y)^n = x^n \cdot y^n $
         \item $ x^{-1} = \frac{1}{x} $
-
     \end{itemize}
     	
     \end{minipage}
@@ -670,6 +669,144 @@
 
 %------------ N'th Roots of Complex Numbers ---------------------
 \node[fancytitle, right=10pt] at (box.north west) {N'th Roots of Complex Numbers};
+\end{tikzpicture}
+
+%------------ Linear Functions ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+
+    \LARGE
+    $ f(x) = mx + b $
+    
+    \normalsize
+    \begin{itemize}
+    \setlength\itemsep{0em}
+        \item Midpoint: $ \frac{x_1+x_2}{2}, \frac{y_1+y_2}{2} $
+        \item Distance: $ \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2} $
+        \item Slope: $ \frac{y_2-y_1}{x_2-x_1} $
+        \item Parallel: $ m_1 = m_2 $ (same slope)
+        \item Perpendicular: $ m_1 = -\frac{1}{m_2}$ (negative reciprocal)
+    \end{itemize}
+
+    \end{minipage}
+};
+
+%------------ Linear Functions ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Linear Functions};
+\end{tikzpicture}
+
+%------------ Quadratic Functions ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+
+    Quadratic Forms: \\
+    Standard: \LARGE $ f(x) = ax^2 + bx + c $ \normalsize \\
+    Factorized: \LARGE $ f(x) = a(x-h)^2 + k $ \normalsize \\
+    Vertex: \LARGE $ f(x) = a(x-p)(x-q) $ \normalsize \\
+    
+    \begin{itemize}
+    \setlength\itemsep{0em}
+        \item Roots/X-intercepts: where $ f(x) = 0 $
+        \item Quadratic Formula: $ \frac{-b +- \sqrt{b^2-4ac}}{2a} $
+        \item Discriminant: $ \sqrt{b^2-4ac} $ (2nd parameter of the quadratic formula)
+        \item Parallel: $ m_1 = m_2 $ (same slope)
+        \item Perpendicular: $ m_1 = -\frac{1}{m_2}$ (negative reciprocal) \\
+    \end{itemize}
+    
+    When the discriminant $ \Delta $ is:
+    \begin{itemize}
+    \setlength\itemsep{0em}
+        \item $ \Delta > 0 \Rightarrow $ 2 solutions
+        \item $ \Delta = 0 \Rightarrow $ 1 solution
+        \item $ \Delta < 0 \Rightarrow $ 0 solutions \\
+        \end{itemize}
+        
+    Completing the square (vertex form): \\\\
+    $ f(x) = 2x^2 - 16x + 10 $
+    \begin{enumerate}
+    \setlength\itemsep{0em}
+        \item Factor out a (coefficient of $ x^2 $):\\
+        $ = 2(x^2-8x)+10 $ \\
+
+        \item Add and subtract the halved and squared version of the coefficient of x: \\
+        $ = 2(x^2-8x+16-16) + 10 $ \\
+
+        \item Bring the subtracted term outside: \\
+        $ = 2(x^2-8x+16)-32+10 $ \\
+        
+        \item The inner terms are a perfect square. Factor them: \\
+        $ = 2(x-4)^2-22 $ \\
+    \end{enumerate}
+
+    \end{minipage}
+};
+
+%------------ Quadratic Functions ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Quadratic Functions};
+\end{tikzpicture}
+
+%------------ Exponential Functions ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+
+    \LARGE
+    $ f(x) = a^{x+b}+c $ \\
+
+    \normalsize
+    If  $ c >= 0 $: 0 roots \\
+
+    \end{minipage}
+};
+
+%------------ Exponential Functions ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Exponential Functions};
+\end{tikzpicture}
+
+
+%------------ Rational Functions ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+
+    \LARGE
+    $ f(x) = \frac{ax+b}{cx+b} $ \\
+    
+    \normalsize
+    Horizontal Asymptote: \\
+    $\lim_{x \to \infty} f(x) = \frac{a}{c} $ \\
+    
+    Vertical Asymptote: \\
+    Occurs when the denominator is equal to 0 $ \therefore x = -\frac{d}{c} $ \\
+    
+    \normalsize
+
+    \end{minipage}
+};
+
+%------------ Rational Functions ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Rational Functions};
+\end{tikzpicture}
+
+%------------ Logarithmic Functions ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+
+    \LARGE
+    $ f(x) = \log_a{x} $ \\
+    
+    \normalsize
+    Inverse exponential function. \\
+    Has one root at $ x = 1 $.
+
+    \end{minipage}
+};
+
+%------------ Logarithmic Functions ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Logarithmic Functions};
 \end{tikzpicture}
 
 
