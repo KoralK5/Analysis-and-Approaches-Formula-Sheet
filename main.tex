@@ -560,7 +560,7 @@
 \node[fancytitle, right=10pt] at (box.north west) {Complex Number Conjugate};
 \end{tikzpicture}
 
-%------------ Complex Number Division ---------------
+%------------ Complex Number Operations - Cartesian ---------------
 \begin{tikzpicture}
 \node [mybox] (box){%
     \begin{minipage}{0.46\textwidth}
@@ -579,9 +579,99 @@
     \end{minipage}
 };
 
-%------------ Complex Number Division Header ---------------------
-\node[fancytitle, right=10pt] at (box.north west) {Complex Number Division};
+%------------ Complex Number Operations - Cartesian Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Complex Number Operations - Cartesian};
 \end{tikzpicture}
+
+%------------ Complex Number Operations - Polar ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+
+    Polar form: \\
+    \LARGE
+    $ cis(x) = \cos{x} + i\sin{x} $ \\
+    
+    \normalsize
+    Given $ z_1 = r_1 cis(\theta_1) $ and $ z_2 = r_2 cis(\theta_2) $: \\
+    
+    Multiplication: \\
+    $ z_1 \cdot z_2 = r_1 \cdot r_2 \cdot cis(\theta_1+\theta_2)$ \\
+    
+    Multiplication: \\
+    $ \frac{z_1}{z_2} = \frac{r1}{r2} cis(\theta_1-\theta_2)$ \\
+
+    \end{minipage}
+};
+
+%------------ Complex Number Operations - Polar Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Complex Number Operations - Polar};
+\end{tikzpicture}
+
+%------------ Euler's Theorem ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+    
+    \LARGE
+    $ e^{ix} = \cos{x} + i\sin{x} $
+
+    \end{minipage}
+};
+
+%------------ Euler's Theorem ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Euler's Theorem};
+\end{tikzpicture}
+
+%------------ De Moivre's Theorem ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+    
+    \LARGE
+    $ z^n = (\cos{x} + i\sin{x})^n = \cos{(nx)} + i\sin{(nx)} $
+
+    \end{minipage}
+};
+
+%------------ De Moivre's Theorem ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {De Moivre's Theorem};
+\end{tikzpicture}
+
+%------------ N'th Roots of Complex Numbers ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+    
+    The n't root of a complex number in the polar form ($ z = r cis(\theta) $): \\
+    \LARGE
+    $ z_{k+1} = \sqrt[n]{r} cis(\frac{\theta}{n} + \frac{2k\pi}{n}) $ \\
+
+    \normalsize
+    
+    Find 3 roots of $ z^3 = 4 + 4\sqrt{3i} $ \\
+    
+    \begin{enumerate}
+    \setlength\itemsep{0em}
+        \item Convert to polar form: \\
+        $ r = \sqrt{4^2 + (4\sqrt{3})^2} = 8 $ \\
+        $ \theta = \arctan{\sqrt{3}} = \frac{\pi}{3} $ \\\\
+        $ z^3 = 8cis(\frac{pi}{3}) $ \\
+        
+        \item Plug values into the \textbf{n'th term formula}:\\
+        \LARGE
+        $ z_1 = \sqrt[3]{8}cis(\frac{\pi}{3 \cdot 3} + \frac{2 \cdot 0 \cdot \pi}{3}) = 2cis(\frac{\pi}{9}) $ \\
+        $ z_2 = \sqrt[3]{8}cis(\frac{\pi}{3 \cdot 3} + \frac{2 \cdot 1 \cdot \pi}{3}) = 2cis(\frac{7\pi}{9}) $ \\
+        $ z_3 = \sqrt[3]{8}cis(\frac{\pi}{3 \cdot 3} + \frac{2 \cdot 2 \cdot \pi}{3}) = 2cis(\frac{13\pi}{9}) $
+    \end{enumerate}
+
+    \end{minipage}
+};
+
+%------------ N'th Roots of Complex Numbers ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {N'th Roots of Complex Numbers};
+\end{tikzpicture}
+
 
 \end{multicols*}
 \end{document}
