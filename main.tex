@@ -381,7 +381,7 @@
     	& $ k $: number of choosing objects from the set \\\\
 	\end{tabular}
 	
-	How many ways can you arrange 'k' from a set of 'n' if the order does not matter?\\
+	How many ways can you arrange 'k' from a set of 'n' if the order does not matter?
 
     \end{minipage}
 };
@@ -452,7 +452,7 @@
     	\large
     	$ = {8 \choose 3}(2x)^{8-3}(-5)^3 $ \\
     	$ = 56(2x)^{5}(-5)^3 $ \\
-    	$ = -224000x^5 $ \\
+    	$ = -224000x^5 $
     \end{enumerate}
 
     \end{minipage}
@@ -598,7 +598,7 @@
     $ z_1 \cdot z_2 = r_1 \cdot r_2 \cdot cis(\theta_1+\theta_2)$ \\
     
     Multiplication: \\
-    $ \frac{z_1}{z_2} = \frac{r1}{r2} cis(\theta_1-\theta_2)$ \\
+    $ \frac{z_1}{z_2} = \frac{r1}{r2} cis(\theta_1-\theta_2)$
 
     \end{minipage}
 };
@@ -756,7 +756,7 @@
     $ f(x) = a^{x+b}+c $ \\
 
     \normalsize
-    If  $ c >= 0 $: 0 roots \\
+    If  $ c >= 0 $: 0 roots
 
     \end{minipage}
 };
@@ -779,9 +779,7 @@
     $\lim_{x \to \infty} f(x) = \frac{a}{c} $ \\
     
     Vertical Asymptote: \\
-    Occurs when the denominator is equal to 0 $ \therefore x = -\frac{d}{c} $ \\
-    
-    \normalsize
+    Occurs when the denominator is equal to 0 $ \therefore x = -\frac{d}{c} $
 
     \end{minipage}
 };
@@ -874,6 +872,110 @@
 
 %------------ Function Transformations ---------------------
 \node[fancytitle, right=10pt] at (box.north west) {Function Transformations};
+\end{tikzpicture}
+
+%------------ Derivatives ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+
+    Polynomials: \\
+    $ f(x) = ax^n \\ $
+    $ f'(x) = nax^{n-1} $ \\
+    (bring down the exponent) \\
+    
+    Constants: \\
+    $ f(x) = a $ \\
+    $ f'(x) = 0 $ \\
+    (always 0) \\
+
+    Sums: \\
+    $ f(x) = ax^n, g(x) = bx^m $ \\
+    $ f'(x) + g'(x) = nax^{n-1} + max^{m-1} $ \\
+    (sum of both derivatives)
+
+    \end{minipage}
+};
+
+%------------ Derivatives ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Derivatives};
+\end{tikzpicture}
+
+%------------ Product Rule - Derivatives ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+    
+    \Large
+    When functions are multiplied $ y = uv $: \\
+    Then: $ y' = uv' + u'v $ \\
+    Same as: $ \frac{dy}{dx} = u \frac{dv}{dx} + v \frac{du}{dx} $
+
+    \end{minipage}
+};
+
+%------------ Product Rule - Derivatives ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Product Rule - Derivatives};
+\end{tikzpicture}
+
+%------------ Quotient Rule - Derivatives ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+
+    \Large
+    When functions are divided $ y = \frac{u}{v} $: \\
+    Then: $ y' = \frac{u'v-uv'}{v^2} $ \\
+    Same as: $ \frac{dy}{dx} = \frac{v \frac{du}{dx} - u \frac{dv}{dx}}{v^2} $
+
+    \end{minipage}
+};
+
+%------------ Quotient Rule - Derivatives ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Quotient Rule - Derivatives};
+\end{tikzpicture}
+
+%------------ Chain Rule - Derivatives ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+
+    \Large
+    Function in another function: $ y = g(u) $ where $ u = f(x) $. \\
+    Then: $ \frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx} $
+
+    \end{minipage}
+};
+
+%------------ Chain Rule - Derivatives ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Chain Rule - Derivatives};
+\end{tikzpicture}
+
+%------------ Common Derivatives ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.46\textwidth}
+
+    \begin{tabular}{l|l|l}
+        \textbf{Trigonometric} \\ \hline
+    	$ \sin{x}' = \cos{x} $ & $ \arcsin{x}' = \frac{1}{\sqrt{1-x^2}} $ & $ \sec{x}' = \sec{x} \cdot \tan{x} $ \\ \hline
+    	$ \cos{x}' = -\sin{x} $ & $ \arccos{x}' = -\frac{1}{\sqrt{1-x^2}} $ & $ \csc{x}' = -\csc{x} \cdot \cot{x} $ \\ \hline
+    	$ \tan{x}' = \sec^2{x} $ & $ \arctan{x}' = \frac{1}{1+x^2} $ & $ \cot{x}' = -\csc^2{x} $ \\ \hline
+    \end{tabular}
+
+    \phantom \\\\    
+
+    \begin{tabular}{l|l}
+        \textbf{Exponential} & \textbf{Logarithmic} \\ \hline
+    	$ (e^x)' = e^x $ & $ (ln(x))' = \frac{1}{x} $ \\ \hline
+    	$ (a^x)' = a^x(\ln{a}) $ & $ (log_a{x})' = \frac{1}{x \ln{a}} $ \\ \hline
+    \end{tabular}
+
+    \end{minipage}
+};
+
+%------------ Common Derivatives ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Common Derivatives};
 \end{tikzpicture}
 
 
